@@ -41,3 +41,39 @@ yarn add react-apexcharts
   - Site settings -> Build & Deploy: (colocar o nome da sua pasta ou subpasta do projeto frontend)
   - Site settings -> Domain Management: (colocar o nome que você quiser)
   - Deploys -> Trigger deploy
+
+- Três pilares do React
+  - Componentes
+  - Props
+  - Estado
+- React Hooks
+  - useState
+  - useEffect
+- Libs
+  - React Router DOM
+  - Axios
+
+  - Instalar React Router DOM
+```bash
+yarn add react-router-dom
+
+yarn add @types/react-router-dom -D
+```
+
+- Instalar Axios
+```bash
+yarn add axios
+```
+
+```
+Hook: useState
+Manter estado no componente
+```
+```
+Hook: useEffect
+Executar algo na instanciação ou destruição do componente, observar estado
+```
+```
+Props
+Argumentos que um componente React pode receber
+```
