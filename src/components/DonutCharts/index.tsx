@@ -17,7 +17,7 @@ const DonutChart = () => {
   });
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/sales/amount-by-seller`)
+    axios.get(`${BASE_URL}/amount-by-seller`)
       .then((response) => {
         const data = response.data as SaleSum[]; // fazendo CAST do response da API para meu tipo de objeto
         const myLabels = data.map(sale => sale.sellerName);
@@ -26,9 +26,6 @@ const DonutChart = () => {
         setChartData({ labels: myLabels, series: mySeries })
       });
   }, []);
-
-
-
 
   const options = { legend: { show: true } };
 
