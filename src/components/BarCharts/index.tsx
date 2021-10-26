@@ -34,7 +34,7 @@ const BarChart = () => {
   });
 
   useEffect(() => {
-    axios.get(`${BASE_URL_V1}/sales/success-rate-by-seller`)
+    axios.get(`${BASE_URL_V1}/api/v1/sales/success-rate-by-seller`)
       .then((response) => {
         const data = response.data as SaleSuccess[]; // fazendo CAST do response da API para meu tipo de objeto
         const myLabels = data.map(sale => sale.sellerName);

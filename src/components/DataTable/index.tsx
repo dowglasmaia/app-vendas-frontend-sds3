@@ -21,7 +21,7 @@ const DataTable = () => {
   });
 
   useEffect(() => {
-    axios.get(`${BASE_URL_V1}/sales?page=${activePage}&size=20&sort=date,desc`)
+    axios.get(`${BASE_URL_V1}/api/v1/sales?page=${activePage}&size=20&sort=date,desc`)
       .then((response) => {
         setPage(response.data as SalePage)
       });
