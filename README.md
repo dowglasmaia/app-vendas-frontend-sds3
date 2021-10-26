@@ -63,6 +63,12 @@ yarn add @types/react-router-dom -D
 - Instalar Axios
 ```bash
 yarn add axios
+
+```
+
+- Instalar date-fns  -  para formata Datas
+```bash
+yarn add date-fns
 ```
 
 ```
@@ -77,3 +83,23 @@ Executar algo na instanciação ou destruição do componente, observar estado
 Props
 Argumentos que um componente React pode receber
 ```
+
+
+- Função auxiliar formatLocalDate
+```bash
+export const formatLocalDate = (date: string, pattern: string) => {
+    const dt = new Date(date);
+    const dtDateOnly = new Date(dt.valueOf() + dt.getTimezoneOffset() * 60 * 1000);
+    return format(dtDateOnly, pattern);
+}
+
+```
+
+- Props
+```
+Argumentos que um componente React pode receber
+
+```
+
+
+

@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
-import { SaleSuccess } from "types/sale";
+import { SaleSuccess } from "types/Sales";
 import { round } from "utils/format";
-import { BASE_URL } from "utils/requests";
+import { BASE_URL_V1 } from "utils/requests";
 
 type SeriesData = {
   name: string;
@@ -34,7 +34,7 @@ const BarChart = () => {
   });
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/success-rate-by-seller`)
+    axios.get(`${BASE_URL_V1}/sales/success-rate-by-seller`)
       .then((response) => {
         const data = response.data as SaleSuccess[]; // fazendo CAST do response da API para meu tipo de objeto
         const myLabels = data.map(sale => sale.sellerName);

@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
-import { SaleSum } from "types/sale";
-import { BASE_URL } from "utils/requests";
+import { SaleSum } from "types/Sales";
+import { BASE_URL_V1 } from "utils/requests";
 
 type ChartData = {
   labels: string[];
@@ -17,7 +17,7 @@ const DonutChart = () => {
   });
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/amount-by-seller`)
+    axios.get(`${BASE_URL_V1}/sales/amount-by-seller`)
       .then((response) => {
         const data = response.data as SaleSum[]; // fazendo CAST do response da API para meu tipo de objeto
         const myLabels = data.map(sale => sale.sellerName);
